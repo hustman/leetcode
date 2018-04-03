@@ -49,7 +49,17 @@ public class OneOrTwoBitCharacters_717 {
         return (one % 2) == 0;
     }
     
-    
+    public boolean isOneBitCharacter3(int[] bits) {
+        int count = 0;
+        for(int i = bits.length-2; i >= 0; i--){
+            if(bits[i] == 1){
+                count++;
+            }else{
+                break;
+            }
+        }
+        return count % 2 == 0;
+    }
     
     @Test
     public void test(){
@@ -60,5 +70,8 @@ public class OneOrTwoBitCharacters_717 {
         bits = new int[]{1,1,1,0};
         Assert.assertFalse(isOneBitCharacter1(bits));
         Assert.assertFalse(isOneBitCharacter2(bits));
+        
+        
+        Assert.assertFalse(isOneBitCharacter3(bits));
     }
 }

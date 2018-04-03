@@ -67,4 +67,10 @@ public class LongestPalindromicSubstring {
         t[str.length() * 2 + 1] = '#';
         return new String(t);
     }
+    
+    
+    public static void main(String[] args) {
+        String str = "babad";
+        System.out.println(longestPalindaromicSubstring2(str));
+    }
 }
